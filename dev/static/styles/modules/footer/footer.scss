@@ -1,1 +1,95 @@
-footer { flex: 0 0 auto; }
+footer {
+  flex: 0 0 auto;
+  background: $bg-color_sub;
+  padding-bottom: 20px;
+  & > .container{
+    & > .sub-footer{
+      width: 100%;
+      padding: 15px 0;
+      margin: 0 auto 80px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #efefef;
+      & > .footer__icons{
+        margin-left: 30px;
+        font-size: 1.3rem;
+        margin-right: auto;
+      }
+      & > .footer__subscribe{
+        width: 50%;
+        position: relative;
+        & > .footer__subscribe-input{
+          height: 40px;
+          width: 100%;
+          padding: 10px 20px;
+        }
+        & > .footer__subscribe-submit{
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 20%;
+          height: 100%;
+          border: none;
+          background-color: $main-color;
+          color: #fff;
+        }
+      }
+    }
+    .end-footer__callback-title,.end-footer__links-title,.end-footer__last-title{
+      font-size: 1rem;
+      text-transform: uppercase;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid rgba(255, 255, 255, .15);
+    }
+    .end-footer{
+      display: flex;
+      flex-wrap: wrap;
+      color: #ccc;
+
+      & > * {
+        padding: 15px;
+
+      }
+      & > .end-footer__callback{
+        min-width: 220px;
+        width: 100%;
+        max-width: 324px;
+        & > .end-footer__phone{
+          margin-bottom: 20px;
+        }
+        & > .end-footer__phone,.end-footer__mail{
+          font-size: .875rem;
+          &:before{
+            margin-right: 20px;
+            width: 20px;
+          }
+        }
+      }
+      & > .end-footer__links{
+        min-width: 150px;
+        margin-right: auto;
+      }
+      & > .end-footer__last{
+        min-width: 220px;
+        width: 100%;
+        max-width: 324px;
+      }
+    }
+  }
+
+}
+@media (max-width: 545px) {
+  footer {
+    & > .container {
+      & > .sub-footer {
+
+        & > .footer__subscribe {
+          margin-top: 20px;
+          flex: 0 1 100%;
+        }
+      }
+    }
+  }
+}

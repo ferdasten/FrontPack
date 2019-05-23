@@ -17,20 +17,22 @@ module.exports = function () {
             }))
             .pipe(cheerio({
                 run: function ($) {
-                    $('[fill]').removeAttr('fill');
-                    $('[stroke]').removeAttr('stroke');
-                    $('[style]').removeAttr('style');
+                    // $('[fill]').removeAttr('fill');
+                    // $('[stroke]').removeAttr('stroke');
+                    // $('[style]').removeAttr('style');
                 },
                 parserOptions: {xmlMode: true}
             }))
             .pipe(replace('&gt;', '>'))
+            //Спрайт в режиме dev почему то не работает
+            /*
             .pipe(svgSprite({
                 mode: {
                     symbol: {
                         sprite: "sprite.svg"
                     }
                 }
-            }))
+            }))*/
             .pipe($.gulp.dest(svgPath.output));
     });
 };

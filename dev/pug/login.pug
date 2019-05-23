@@ -1,0 +1,20 @@
+extends template/main
+
+block variables
+    - var title = 'Логин'
+    - var pageClass = 'login-page'
+
+block content
+    .login
+        .container
+            form.form
+                label.form__label-user Имя пользователя или e-mail
+                input(type="text").form__input-user
+                label.form__label-password Пароль
+                input(type="password").form__input-password
+                label.form__label-checkbox Запомнить меня
+                input(type="checkbox").form__input-checkbox
+                button.form__submit Войти
+            .form-links
+                a Регистрация
+                a Забыли пароль?

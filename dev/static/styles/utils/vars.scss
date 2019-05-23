@@ -1,6 +1,13 @@
 // Colors
 $white: #ffffff;
 $black: #000000;
+$color-text_black: #5a5959;
+$color-text_white: #efefef;
+$main-color: #f24b0a;
+$bg-color: #fbfbfb;
+$bg-color_sub : #2a2a2a;
+$color-line-menu: #e7e7e7;
+
 
 // Sizes
 $base-font-size: 16px;
@@ -16,6 +23,11 @@ $breakpoints: (
   "desktop-wide": 1440px
 );
 
-$content-size: 1024px;
+$content-size: 1070px;
 
 // Fonts
+$breakpoints: (
+        Laptop : 1440px,
+        Tablet: 768px,
+        Mobile : 425px
+);
